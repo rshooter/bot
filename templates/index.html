@@ -28,8 +28,7 @@
 
         <!-- Platform controls -->
         <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Platform Control</h3>
@@ -84,8 +83,116 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5" id="bot-view"></div>
-            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Platform Control</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="y-axis-value-holder">Y Axis</label>
+                                <input type="text" class="form-control" name="y-axis-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="y-axis" value="90" min="0" max="180">
+                            </div>
+                            <div class="form-group">
+                                <label for="x-axis-value-holder">X Axis</label>
+                                <input type="text" class="form-control" name="x-axis-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="x-axis" value="90" min="0" max="180">
+                            </div>
+                            <div class="form-group">
+                                <label for="z-axis-value-holder">Z Axis</label>
+                                <input type="text" class="form-control" name="z-axis-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="z-axis" value="90" min="0" max="180">
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-group">
+                                <label for="servo-one-value-holder">Servo One</label>
+                                <input type="text" class="form-control" name="servo-one-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="servo-one" value="90" min="0" max="180">
+                            </div>
+                            <div class="form-group">
+                                <label for="servo-two-value-holder">Servo Two</label>
+                                <input type="text" class="form-control" name="servo-two-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="servo-two" value="90" min="0" max="180">
+                            </div>
+                            <div class="form-group">
+                                <label for="servo-three-value-holder">Servo Three</label>
+                                <input type="text" class="form-control" name="servo-three-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="servo-three" value="90" min="0" max="180">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Platform Control</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="y-axis-value-holder">Y Axis</label>
+                                <input type="text" class="form-control" name="y-axis-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="y-axis" value="90" min="0" max="180">
+                            </div>
+                            <div class="form-group">
+                                <label for="x-axis-value-holder">X Axis</label>
+                                <input type="text" class="form-control" name="x-axis-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="x-axis" value="90" min="0" max="180">
+                            </div>
+                            <div class="form-group">
+                                <label for="z-axis-value-holder">Z Axis</label>
+                                <input type="text" class="form-control" name="z-axis-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="z-axis" value="90" min="0" max="180">
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-group">
+                                <label for="servo-one-value-holder">Servo One</label>
+                                <input type="text" class="form-control" name="servo-one-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="servo-one" value="90" min="0" max="180">
+                            </div>
+                            <div class="form-group">
+                                <label for="servo-two-value-holder">Servo Two</label>
+                                <input type="text" class="form-control" name="servo-two-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="servo-two" value="90" min="0" max="180">
+                            </div>
+                            <div class="form-group">
+                                <label for="servo-three-value-holder">Servo Three</label>
+                                <input type="text" class="form-control" name="servo-three-value-holder" value="90">
+                            </div>
+                            <div class="form-group">
+                                <input type="range" name="servo-three" value="90" min="0" max="180">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- / Platform controls row -->
 
@@ -144,14 +251,11 @@
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/jquery-ui.js"></script>
-    <script src="static/js/three.js"></script>
-    <script src="static/js/OrbitControls.js"></script>
-    <script src="static/js/TransformControls.js"></script>
     <script src="static/js/socket.io-1.4.5.js"></script>
 
 
     <script>
-        var socket = io('http://192.168.0.118:8888');
+        var socket = io('http://192.168.0.110:8888');
 
         $(document).ready(function() {
             // Y Axis
@@ -163,8 +267,6 @@
             });
             $('input[name=y-axis]').on('input', function() {
                 $('input[name=y-axis-value-holder]').val($('input[name=y-axis]').val());
-                cube.rotation.y = ($('input[name=y-axis]').val() * (3.14 / 180)) - (90 * (3.14 / 180));
-                render();
             });
 
 
@@ -177,8 +279,6 @@
             });
             $('input[name=x-axis]').on('input', function() {
                 $('input[name=x-axis-value-holder]').val($('input[name=x-axis]').val());
-                cube.rotation.x = ($('input[name=x-axis]').val() * (3.14 / 180)) - (90 * (3.14 / 180));
-                render();
             });
 
 
@@ -191,8 +291,6 @@
             });
             $('input[name=z-axis]').on('input', function() {
                 $('input[name=z-axis-value-holder]').val($('input[name=z-axis]').val());
-                cube.rotation.z = ($('input[name=z-axis]').val() * (3.14 / 180)) - (90 * (3.14 / 180));
-                render();
             });
 
 
@@ -286,78 +384,6 @@
             }
 
         });
-
-        socket.on('position', function (data) {
-          pitch = data.pitch
-          yaw = data.yaw
-          roll = data.roll
-        })
-
-        var scene, camera, rendered, control, cube, controls;
-        init();
-        animate();
-
-        function init() {
-            scene = new THREE.Scene();
-            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-            renderer = new THREE.WebGLRenderer();
-            renderer.setSize($("#bot-view").width(), $("#bot-view").height());
-            container = document.getElementById('bot-view');
-            container.appendChild(renderer.domElement);
-
-            var geometry = new THREE.BoxGeometry(5, 1, 10);
-            var material = new THREE.MeshBasicMaterial({
-                color: 0x00ff00
-            });
-            cube = new THREE.Mesh(geometry, material);
-            scene.add(cube);
-
-            // var size = 10;
-            // var divisions = 10;
-            // var gridHelper = new THREE.GridHelper( size, divisions );
-            // scene.add( gridHelper );
-
-            // PolarGridHelper
-            var radius = 10;
-            var radials = 16;
-            var circles = 8;
-            var divisions = 64;
-
-            var helper = new THREE.PolarGridHelper(radius, radials, circles, divisions);
-            scene.add(helper);
-
-            var axisHelper = new THREE.AxisHelper(20);
-            scene.add(axisHelper);
-
-            camera.position.x = 20;
-            camera.position.y = 20;
-            camera.position.z = 20;
-
-            controls = new THREE.OrbitControls(camera, container);
-            controls.enabled = false;
-            controls.addEventListener('change', render);
-            // control = new THREE.TransformControls( camera, renderer.domElement );
-            // control.addEventListener( 'change', render );
-            // control.attach( cube );
-            // scene.add( control );
-            // control.setMode( "rotate" );
-        }
-
-        function animate() {
-            requestAnimationFrame(animate);
-            controls.update();
-        }
-
-        function render() {
-          // requestAnimationFrame( render )
-          // cube.rotation.x = roll
-          // cube.rotation.y = yaw
-          // cube.rotation.z = pitch
-          renderer.render(scene, camera);
-        }
-
-        render();
     </script>
 </body>
 
